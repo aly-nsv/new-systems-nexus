@@ -109,7 +109,7 @@ export default function ViewsSidebarWithFilters({
         ))}
       </SidebarSection>
       
-      <SidebarSection title="Quick Filters">
+      <SidebarSection title="Quick Filter">
         {additionalViews.map((view) => (
           <SidebarItem
             key={view.id}

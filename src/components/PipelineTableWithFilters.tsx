@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
@@ -12,6 +12,7 @@ import {
   SortingState,
   ColumnFiltersState,
   Column,
+  OnChangeFn,
 } from '@tanstack/react-table'
 import { 
   Pipeline, 
@@ -132,8 +133,8 @@ function ColumnFilter({ column }: { column: Column<Pipeline, unknown> }) {
       <Select
         value={columnFilterValue as string || ''}
         onChange={(value) => {
-          if (value === '') column.setFilterValue(undefined)
-          else column.setFilterValue(value === 'true')
+          if (value.target.value === '') column.setFilterValue(undefined)
+          else column.setFilterValue(value.target.value === 'true')
         }}
         options={[
           { value: '', label: 'All' },
@@ -175,7 +176,7 @@ export default function PipelineTableWithFilters({
   const [showFilters, setShowFilters] = useState(false)
 
   // Use external filters directly, with callback for changes
-  const handleColumnFiltersChange = (updater: any) => {
+  const handleColumnFiltersChange = (updater: (filters: ColumnFiltersState) => ColumnFiltersState) => {
     const newFilters = typeof updater === 'function' ? updater(externalFilters) : updater
     onFiltersChange?.(newFilters)
   }
@@ -372,7 +373,7 @@ export default function PipelineTableWithFilters({
       globalFilter,
     },
     onSortingChange: setSorting,
-    onColumnFiltersChange: handleColumnFiltersChange,
+    onColumnFiltersChange: handleColumnFiltersChange as OnChangeFn<ColumnFiltersState>,
     onGlobalFilterChange: setGlobalFilter,
     globalFilterFn: (row, columnId, filterValue) => {
       if (!filterValue || typeof filterValue !== 'string') return true
@@ -404,7 +405,7 @@ export default function PipelineTableWithFilters({
       status: formData.get('status') as StatusEnum,
       priority: formData.get('priority') as PriorityEnum,
       roundStage: formData.get('roundStage') as RoundStageEnum,
-      roundSize: formData.get('roundSize') ? parseFloat(formData.get('roundSize') as string) * 100 : null, // Convert to cents
+      roundSize: formData.get('roundSize') ? parseFloat(formData.get('roundSize') as string) * 100 : undefined, // Convert to cents
       toReview: formData.get('toReview') === 'on',
       twoPagerReady: formData.get('twoPagerReady') === 'on',
     }

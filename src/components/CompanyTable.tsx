@@ -68,6 +68,7 @@ export default function CompanyTable({
           'Closed Lost': 'bg-red-100 text-red-800',
         }
         return (
+          // @ts-expect-error - stage is a string
           <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors[stage]}`}>
             {stage}
           </span>
@@ -155,7 +156,7 @@ export default function CompanyTable({
     const updatedCompany = {
       ...editingCompany,
       companyName: formData.get('companyName') as string,
-      dealStage: formData.get('dealStage') as DealStage,
+      dealStage: formData.get('dealStage') as DealStageEnum,
       contactPerson: formData.get('contactPerson') as string,
       contactEmail: formData.get('contactEmail') as string,
       dealValue: parseFloat(formData.get('dealValue') as string) || 0,

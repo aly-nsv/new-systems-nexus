@@ -157,32 +157,32 @@ export default function Dashboard() {
     )
   }
 
-  const getViewTitle = () => {
-    switch (activeView) {
-      case 'new-companies':
-        return 'New Companies'
-      case 'action-items':
-        return 'Action Items'
-      case 'investment-pipeline':
-        return 'Investment Pipeline'
-      case 'portfolio':
-        return 'Portfolio'
-      case 'diligence':
-        return 'In Diligence'
-      case 'meetings-scheduled':
-        return 'Meetings Scheduled'
-      case 'to-pass':
-        return 'To Pass'
-      case 'high-priority':
-        return 'High Priority'
-      case 'seed-stage':
-        return 'Seed Stage'
-      case 'series-a':
-        return 'Series A'
-      default:
-        return 'All Pipeline'
-    }
-  }
+  // const getViewTitle = () => {
+  //   switch (activeView) {
+  //     case 'new-companies':
+  //       return 'New Companies'
+  //     case 'action-items':
+  //       return 'Action Items'
+  //     case 'investment-pipeline':
+  //       return 'Investment Pipeline'
+  //     case 'portfolio':
+  //       return 'Portfolio'
+  //     case 'diligence':
+  //       return 'In Diligence'
+  //     case 'meetings-scheduled':
+  //       return 'Meetings Scheduled'
+  //     case 'to-pass':
+  //       return 'To Pass'
+  //     case 'high-priority':
+  //       return 'High Priority'
+  //     case 'seed-stage':
+  //       return 'Seed Stage'
+  //     case 'series-a':
+  //       return 'Series A'
+  //     default:
+  //       return 'All Pipeline'
+  //   }
+  // }
 
   return (
     <div className="flex h-screen bg-gray-50">
@@ -197,20 +197,11 @@ export default function Dashboard() {
         onColumnFiltersChange={setColumnFilters}
       />
       
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="flex-1 flex flex-col overflow-hidden p-1">
         <Header />
         
-        <main className="flex-1 overflow-auto p-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-6">
-              <h1 className="text-2xl font-bold text-gray-900">
-                {getViewTitle()}
-              </h1>
-              <p className="text-gray-600">
-                {activeView !== 'all' && columnFilters.length > 0 ? 'Filtered view' : `${pipeline.length} entries`}
-              </p>
-            </div>
-            
+        <main className="flex-1 overflow-auto pt-2 px-2">
+          <div className="w-full mx-auto">
             <PipelineTableWithFilters
               pipeline={pipeline}
               users={users}

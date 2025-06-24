@@ -5,7 +5,7 @@ import { z } from 'zod'
 
 const updateCompanySchema = z.object({
   companyName: z.string().min(1, 'Company name is required').optional(),
-  dealStage: z.enum(['Prospect', 'Qualification', 'Proposal', 'Negotiation', 'Closed Won', 'Closed Lost']).optional(),
+  dealStage: z.enum(['Prospect', 'Qualification', 'Proposal', 'Negotiation', 'Closed-Won', 'Closed-Lost', 'In-Progress', 'On-Hold', 'Cancelled', 'Other']).optional(),
   contactPerson: z.string().optional(),
   contactEmail: z.string().email().optional().or(z.literal('')),
   dealValue: z.number().min(0).optional(),

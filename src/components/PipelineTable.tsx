@@ -252,10 +252,11 @@ export default function PipelineTable({
       status: formData.get('status') as StatusEnum,
       priority: formData.get('priority') as PriorityEnum,
       roundStage: formData.get('roundStage') as RoundStageEnum,
-      roundSize: formData.get('roundSize') ? parseFloat(formData.get('roundSize') as string) * 100 : null, // Convert to cents
+      roundSize: formData.get('roundSize') ? parseFloat(formData.get('roundSize') as string) * 100 : undefined, // Convert to cents
       toReview: formData.get('toReview') === 'on',
       twoPagerReady: formData.get('twoPagerReady') === 'on',
     }
+    console.log(pipeline)
     onPipelineCreate(pipeline)
     setIsCreateModalOpen(false)
   }
@@ -281,7 +282,7 @@ export default function PipelineTable({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 pt-2">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">

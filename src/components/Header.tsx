@@ -18,6 +18,15 @@ export default function Header() {
           <h1 className="text-xl font-semibold text-gray-900">
             New Systems Nexus
           </h1>
+          {/* <div className="mb-6">
+              <h1 className="text-2xl font-bold text-gray-900">
+                {getViewTitle()}
+              </h1>
+              <p className="text-gray-600">
+                {activeView !== 'all' && columnFilters.length > 0 ? 'Filtered view' : `${pipeline.length} entries`}
+              </p>
+            </div>
+             */}
         </div>
         
         <div className="flex items-center space-x-4">

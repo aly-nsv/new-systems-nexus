@@ -161,7 +161,7 @@ export async function PUT(
     
     const validatedData = updatePipelineSchema.parse(body)
     
-    const pipeline = await DatabaseService.updatePipeline(resolvedParams.id, validatedData, user.id)
+    const pipeline = await DatabaseService.updatePipeline(resolvedParams.id, { ...validatedData, id: resolvedParams.id }, user.id)
     
     if (!pipeline) {
       return NextResponse.json(

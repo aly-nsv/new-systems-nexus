@@ -168,7 +168,7 @@ export default function AdminPage() {
     <div className="flex flex-col h-screen bg-gray-50">
       <Header />
       
-      <main className="flex-1 overflow-auto p-6">
+      <main className="flex-1 overflow-auto p-1 pt-2 px-2">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
             <div className="flex items-center justify-between">

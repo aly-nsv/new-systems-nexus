@@ -55,7 +55,7 @@ const Sidebar = ({ children, className }: SidebarProps) => {
 
 const SidebarSection = ({ title, children }: SidebarSectionProps) => (
   <div className="space-y-2">
-    <h3 className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+    <h3 className="pr-1 text-xs font-size-6 font-semibold text-gray-500 uppercase tracking-wider">
       {title}
     </h3>
     <div className="space-y-1">

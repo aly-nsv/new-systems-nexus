@@ -140,3 +140,114 @@ GET /api/views/pipeline error: TypeError: Cannot read properties of undefined (r
  GET /api/users 200 in 533ms
  GET /api/categories 200 in 611ms
  GET /api/pipeline 200 in 1063ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 61ms
+ ✓ Compiled in 57ms
+ GET /dashboard 200 in 188ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 78ms
+ GET /api/users 200 in 607ms
+ GET /api/categories 200 in 636ms
+ GET /api/pipeline 200 in 1004ms
+ ✓ Compiled in 47ms
+ ✓ Compiled in 46ms
+ ✓ Compiled in 42ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 79ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 43ms
+ ✓ Compiled in 48ms
+ GET /dashboard 200 in 168ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 67ms
+ GET /api/users 200 in 513ms
+ GET /api/categories 200 in 604ms
+ GET /api/pipeline 200 in 872ms
+ ✓ Compiled in 83ms
+ ✓ Compiled in 49ms
+ ✓ Compiled in 44ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 51ms
+ ✓ Compiled in 54ms
+ ✓ Compiled in 47ms
+ ✓ Compiled in 49ms
+ ✓ Compiled in 46ms
+ GET /dashboard 200 in 171ms
+ GET /api/users 200 in 540ms
+ GET /api/categories 200 in 697ms
+ GET /api/pipeline 200 in 974ms
+ GET /dashboard 200 in 45ms
+ GET /api/users 200 in 265ms
+ GET /api/categories 200 in 504ms
+ GET /api/pipeline 200 in 837ms
+ ✓ Compiled in 42ms
+ ✓ Compiled in 48ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 48ms
+ ✓ Compiled in 45ms
+ ✓ Compiled in 47ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 573ms
+ GET /admin 200 in 591ms
+ ✓ Compiled /api/permissions in 334ms
+GET /api/permissions error: Error: Forbidden: Admin access required
+    at requireAdmin (src/lib/auth.ts:37:10)
+    at async GET (src/app/api/permissions/route.ts:13:4)
+  35 |   
+  36 |   if (!isAllowedEmail(user.email)) {
+> 37 |     throw new Error('Forbidden: Admin access required')
+     |          ^
+  38 |   }
+  39 |
+  40 |   return user
+ GET /api/permissions 403 in 397ms
+GET /api/permissions error: Error: Forbidden: Admin access required
+    at requireAdmin (src/lib/auth.ts:37:10)
+    at async GET (src/app/api/permissions/route.ts:13:4)
+  35 |   
+  36 |   if (!isAllowedEmail(user.email)) {
+> 37 |     throw new Error('Forbidden: Admin access required')
+     |          ^
+  38 |   }
+  39 |
+  40 |   return user
+ GET /api/permissions 403 in 73ms
+ GET /dashboard 200 in 100ms
+ GET /api/users 200 in 555ms
+ GET /api/categories 200 in 579ms
+ GET /api/categories 200 in 383ms
+ GET /api/users 200 in 434ms
+ GET /api/pipeline 200 in 1066ms
+ GET /api/pipeline 200 in 580ms
+ POST /dashboard 200 in 39ms
