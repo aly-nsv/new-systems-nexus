@@ -133,3 +133,10 @@ GET /api/views/pipeline error: TypeError: Cannot read properties of undefined (r
  GET /api/users 200 in 412ms
  GET /api/categories 200 in 542ms
  GET /api/pipeline 200 in 789ms
+ ○ Compiling / ...
+ ✓ Compiled / in 523ms
+ GET / 307 in 571ms
+ GET /dashboard 200 in 174ms
+ GET /api/users 200 in 533ms
+ GET /api/categories 200 in 611ms
+ GET /api/pipeline 200 in 1063ms
