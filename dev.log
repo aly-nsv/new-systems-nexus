@@ -1,0 +1,135 @@
+
+> new-systems-nexus@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.3.4 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.86.193:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Compiled middleware in 193ms
+ ✓ Ready in 918ms
+ ○ Compiling /api/pipeline ...
+ ✓ Compiled /api/pipeline in 515ms
+GET /api/pipeline error: Error: Unauthorized
+    at requireAuth (src/lib/auth.ts:27:10)
+    at async GET (src/app/api/pipeline/route.ts:142:4)
+  25 |   
+  26 |   if (!user) {
+> 27 |     throw new Error('Unauthorized')
+     |          ^
+  28 |   }
+  29 |
+  30 |   return user
+ GET /api/pipeline 500 in 700ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1232ms
+ GET /dashboard 200 in 1383ms
+ ○ Compiling /_not-found/page ...
+ ✓ Compiled /_not-found/page in 1104ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1162ms
+ GET /api/pipeline 200 in 891ms
+ GET /api/users 200 in 925ms
+ GET /api/categories 200 in 934ms
+ GET /dashboard 200 in 183ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 125ms
+ GET /api/users 200 in 452ms
+ GET /api/categories 200 in 520ms
+ GET /api/pipeline 200 in 967ms
+ ✓ Compiled /api/views/pipeline in 369ms
+GET /api/views/pipeline error: TypeError: Cannot read properties of undefined (reading 'id')
+    at DatabaseService.mapSLRCategoryFromDb (src/lib/database.ts:719:15)
+    at <unknown> (src/lib/database.ts:702:76)
+    at Array.map (<anonymous>)
+    at DatabaseService.mapPipelineFromDb (src/lib/database.ts:702:42)
+    at mapNewCompanyViewFromDb (src/lib/database.ts:804:25)
+    at Array.map (<anonymous>)
+    at DatabaseService.getNewCompaniesView (src/lib/database.ts:438:24)
+    at async GET (src/app/api/views/pipeline/route.ts:16:17)
+  717 |   private static mapSLRCategoryFromDb(data: any): SLRCategory {
+  718 |     return {
+> 719 |       id: data.id,
+      |               ^
+  720 |       name: data.name,
+  721 |       color: data.color,
+  722 |       createdAt: new Date(data.created_at)
+ GET /api/views/pipeline?view=new-companies 500 in 946ms
+ GET /api/views/pipeline?view=new-companies 404 in 43ms
+ ✓ Compiled in 133ms
+ ✓ Compiled in 316ms
+ GET /api/users 200 in 642ms
+ GET /api/categories 200 in 706ms
+ GET /api/pipeline 200 in 909ms
+ ✓ Compiled in 60ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/api/pipeline/[__metadata_id__]/route/app-paths-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/api/pipeline/[__metadata_id__]/route/app-paths-manifest.json'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 524ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/static/development/_buildManifest.js.tmp.4mgl31oxp36'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/static/development/_buildManifest.js.tmp.4mgl31oxp36'
+}
+[Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/api/pipeline/[__metadata_id__]/route/app-paths-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/api/pipeline/[__metadata_id__]/route/app-paths-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/static/development/_buildManifest.js.tmp.znas8j44tsd'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/static/development/_buildManifest.js.tmp.znas8j44tsd'
+}
+[Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/static/development/_buildManifest.js.tmp.28qa7bk8wb8'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/static/development/_buildManifest.js.tmp.28qa7bk8wb8'
+}
+ GET /dashboard 200 in 201ms
+ GET /api/users 200 in 510ms
+ GET /api/categories 200 in 584ms
+ GET /api/pipeline 200 in 777ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 233ms
+ GET /dashboard 200 in 394ms
+ GET /api/users 200 in 270ms
+ GET /api/categories 200 in 479ms
+ GET /api/pipeline 200 in 828ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 45ms
+ GET /api/users 200 in 244ms
+ GET /api/categories 200 in 244ms
+ GET /api/pipeline 200 in 248ms
+ GET /dashboard 200 in 304ms
+ GET /dashboard 200 in 336ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/alyshahudson/Desktop/repos/new-systems-nexus/.next/server/app/_not-found/page/app-build-manifest.json'
+}
+ GET /.well-known/appspecific/com.chrome.devtools.json 500 in 414ms
+ GET /api/users 200 in 345ms
+ GET /api/categories 200 in 476ms
+ GET /api/users 200 in 252ms
+ GET /api/categories 200 in 331ms
+ GET /api/pipeline 200 in 749ms
+ GET /api/pipeline 200 in 640ms
+ ✓ Compiled in 105ms
+ ✓ Compiled in 64ms
+ ✓ Compiled in 41ms
+ ✓ Compiled in 40ms
+ GET /dashboard 200 in 201ms
+ GET /api/users 200 in 412ms
+ GET /api/categories 200 in 542ms
+ GET /api/pipeline 200 in 789ms

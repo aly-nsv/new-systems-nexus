@@ -1,0 +1,1 @@
+-- regenerate the schema when needed from the airtable dump script
